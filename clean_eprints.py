@@ -3,40 +3,28 @@ import os
 import pandas as pd
 
 
-#import the metadata from excel and assign it to the variable called metadata_extract as a data frame(table)
+#---------------import file and assign it to variable as a data frame--------------------
 metadata_extract = pd.read_excel(r"C:\Users\46071956\Downloads\library_data_cleansing_activity_1\Inputs\metadata_extract_20260127.xlsx")
 
 
-#display head of metadata_extract on screen to see the first few lines of the table
-print(metadata_extract.head())
-print(metadata_extract.columns)
 
-
-#define what rows I want to keep  ("conference_item", "exhibition", "performance")
+#--------------define what rows to keep ---------------------------------------------
 allowed_types= ("conference_item", "exhibition", "performance")
 
 
-#create a filter to show me only rows that contain values conference_item AND exhibition AND performance within Column D ()
-filtered_data=[metadata_extract["eprints_type"].isin(allowed_types)]
+#---------apply filter to create new data frame with only the rows that contain the accepted values------------------------
 
-
-# get it to show me the filtered result 
-print("below is the filtered data")
-
-print(filtered_data)
-
-#this only shows me whether rows meet the conditions true/false, i want it to FILTER it down. 
-print("below is the final output")
 filtered_data=metadata_extract[metadata_extract["eprints_type"].isin(allowed_types)]
 
 
 
-#show the first few lines of rows that meet conditions and also show the number of total lines.
+#----------print first 5 lines of the filtered data frame to check it has worked and print total number of rows in filtered data frame--------------------
+
 print(filtered_data.head())
 print(len(filtered_data))
 
 
-#export it back into an excel spreadsheet (note make sure to save before running as it was not recognising the new file path that I had pasted)
+#-----------------export the filtered data frame to a new excel file----------------------
 print("Saving new file with filtered data")
 
-filtered_data.to_excel(r"C:\Users\46071956\Downloads\library_data_cleansing_activity_1\Outputs\metadata_extract_20260127_filtered.xlsx", index=False)
+filtered_data.to_excel(r"C:\Users\46071956\Downloads\library_data_cleansing_activity_1\Outputs\metadata_extract_20260127_filtered_task_one_activity_one.xlsx", index=False)
