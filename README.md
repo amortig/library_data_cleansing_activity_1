@@ -1,5 +1,13 @@
-**Project Title - Open Research Excel Data Cleansing script**
-The scripts in this repository are to be used to perform basic Excel data cleansing tasks, particularly, filtering by variable and standardising values. 
+																													**Project Title - Open Research Excel Data Cleansing script**
+								The scripts in this repository are to be used to perform basic Excel data cleansing tasks, particularly, filtering by variable and standardising values. **
+
+
+								
+<img width="381" height="223" alt="image" src="https://github.com/user-attachments/assets/e09e12d8-ade8-4dd8-9406-7b377e7ca225" />
+
+<img width="368" height="192" alt="image" src="https://github.com/user-attachments/assets/bd62e064-c785-43a1-892d-7734bbc44303" />
+
+
 
 
 **clean_eprints.py:**
